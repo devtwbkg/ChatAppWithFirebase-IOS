@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OwnerViewCell" id="KGk-i7-Jjw" customClass="OwnerViewCell" customModule="ChatApp_IOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="313" height="55.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-lb-GaQ">
+                        <rect key="frame" x="264" y="4" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="Wm0-4T-jgU"/>
+                            <constraint firstAttribute="height" constant="45" id="fAW-oc-rAS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessage" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4f-Oe-xVk">
+                        <rect key="frame" x="0.0" y="21" width="264" height="101.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo6-OK-YWI">
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="y4f-Oe-xVk" secondAttribute="bottom" id="1Wo-i2-Zfp"/>
+                    <constraint firstItem="Zo6-OK-YWI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9po-rl-SEx"/>
+                    <constraint firstItem="Zo6-OK-YWI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G4m-ed-Kdx"/>
+                    <constraint firstAttribute="bottom" secondItem="jpq-lb-GaQ" secondAttribute="bottom" constant="4" id="SJJ-1I-gBa"/>
+                    <constraint firstItem="y4f-Oe-xVk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vwu-eV-hTn"/>
+                    <constraint firstItem="y4f-Oe-xVk" firstAttribute="top" secondItem="Zo6-OK-YWI" secondAttribute="bottom" id="WdP-0V-213"/>
+                    <constraint firstItem="jpq-lb-GaQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="h8G-hv-Nhj"/>
+                    <constraint firstAttribute="trailing" secondItem="jpq-lb-GaQ" secondAttribute="trailing" constant="4" id="lkA-ng-iUk"/>
+                    <constraint firstItem="jpq-lb-GaQ" firstAttribute="leading" secondItem="y4f-Oe-xVk" secondAttribute="trailing" id="n65-7T-g3c"/>
+                    <constraint firstItem="jpq-lb-GaQ" firstAttribute="leading" secondItem="Zo6-OK-YWI" secondAttribute="trailing" constant="8" id="sh7-B4-2cb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avartarImage" destination="jpq-lb-GaQ" id="7RZ-uA-NcV"/>
+                <outlet property="messageLabel" destination="y4f-Oe-xVk" id="C4n-dD-h8A"/>
+                <outlet property="senderLabel" destination="Zo6-OK-YWI" id="t6s-RA-fQa"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="87.723214285714278"/>
+        </tableViewCell>
+    </objects>
+</document>
