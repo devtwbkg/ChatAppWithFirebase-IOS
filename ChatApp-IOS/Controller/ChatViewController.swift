@@ -11,8 +11,8 @@ import Firebase
 import SVProgressHUD
 
 class ChatViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-  
-
+   
+    
     var messageArray: [Message] = [Message]()
     
     var currentUser : String? = ""
@@ -23,9 +23,11 @@ class ChatViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
 
        currentUser = Auth.auth().currentUser?.email
-        // Do any additional setup after loading the view.
         
         messageTableView.delegate = self
         messageTableView.dataSource = self
@@ -46,9 +48,9 @@ class ChatViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     func configureTableViewCell(){
-        
+        messageTableView.estimatedRowHeight = 500
         messageTableView.rowHeight = UITableView.automaticDimension
-        messageTableView.estimatedRowHeight = 230.0
+       
     }
     
     @objc func tableViewTapped() {
@@ -117,6 +119,11 @@ class ChatViewController: UIViewController , UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
+//
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
